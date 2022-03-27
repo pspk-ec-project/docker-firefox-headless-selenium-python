@@ -1,9 +1,9 @@
-FROM ubuntu:17.10
+FROM ubuntu:20.04
 ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 ENV DEBCONF_NONINTERACTIVE_SEEN true
 
-MAINTAINER Jorge Useche <juusechec@gmail.com>
+MAINTAINER srinaths119@gamil.com
 USER root
 # Install dependencies
 RUN apt-get -qqy update
@@ -35,4 +35,4 @@ RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.19.0/geckod
 # Run at begin
 ADD ./scripts/ /home/root/scripts
 EXPOSE 4444 5999
-CMD ["sh", "/home/root/scripts/start.sh"]
+CMD ["sh", "/home/root/scripts/run.sh"]
